@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://theshahbaz.com
+
+# Sitemaps
+Sitemap: https://theshahbaz.com/sitemap.xml

@@ -1,0 +1,46 @@
+import { CareerProps } from '../types/careers';
+
+export const CAREERS: CareerProps[] = [
+  {
+    position: 'Senior Frontend Developer',
+    company: 'XIOTS',
+    company_legal_name: 'XIOTS',
+    logo: '/images/careers/xiots.svg',
+    location: 'Blackburn Suite 1M Number One The beehive Lions Drive',
+    location_type: 'Hybrid',
+    type: 'Full-time',
+    start_date: '2020-10',
+    end_date: null,
+    industry: 'software',
+    link: '#',
+    responsibilities: [
+      'Leading frontend development efforts, crafting high-performance, scalable, and user-focused applications.',
+      'Managing and mentoring a team of frontend developers, ensuring best practices in coding standards, performance, and design.',
+      'Skilled in advanced JavaScript frameworks and libraries, including React, Next.js, and Tailwind CSS.',
+      'Overseeing project timelines, coordinating with backend teams, and ensuring successful project delivery.',
+      'Prioritizing user experience through responsive, intuitive, and visually engaging interfaces.',
+      'Working closely with cross-functional teams to align frontend goals with overall business objectives.',
+    ],
+  },
+  {
+    position: 'Full Stack Developer',
+    company: 'Fiverr',
+    company_legal_name: 'Fiverr',
+    logo: '/images/careers/fiver.svg',
+    location: 'United States',
+    location_type: 'Remote',
+    type: 'Full-time',
+    start_date: '2019-09',
+    end_date: null,
+    industry: 'software',
+    link: 'https://www.fiverr.com/s/38aqYKB',
+    responsibilities: [
+      'Expertise in Next.js, React, Node.js, and Nest.js for full-stack development.',
+      'Skilled in building responsive e-commerce sites with secure payment gateways.',
+      'Proficient in creating RESTful APIs, GraphQL, and real-time applications.',
+      'Strong experience with Prisma, MongoDB, and Supabase for database management.',
+      'Level 2 seller with 5+ years on Fiverr delivering reliable, client-focused solutions.',
+      'Known for clear communication, meeting deadlines, and exceeding client expectations.',
+    ],
+  },
+];
