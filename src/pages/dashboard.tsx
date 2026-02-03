@@ -32,13 +32,19 @@ export default DashboardPage;
 
 export const getStaticProps: GetStaticProps = async () => {
   // const readStats = await getReadStats();
-  const githubUserPersonal = await getGithubUser('personal');
+  let githubUserPersonal = null;
+  try {
+    githubUserPersonal = await getGithubUser('personal');
+  } catch {
+    // 401 or other error during build (e.g. missing GITHUB_TOKEN on Vercel).
+    // Page still builds; client-side SWR will fetch from /api/github when users visit.
+  }
 
   return {
     props: {
       fallback: {
         // '/api/read-stats': readStats.data,
-        '/api/github?type=personal': githubUserPersonal?.data,
+        '/api/github?type=personal': githubUserPersonal?.data ?? null,
       },
     },
     revalidate: 1,
