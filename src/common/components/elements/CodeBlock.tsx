@@ -5,7 +5,9 @@ import {
   HiOutlineClipboardCopy as CopyIcon,
 } from 'react-icons/hi';
 import { CodeProps } from 'react-markdown/lib/ast-to-react';
+import type { ComponentType } from 'react';
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+import type { SyntaxHighlighterProps } from 'react-syntax-highlighter';
 import css from 'react-syntax-highlighter/dist/cjs/languages/prism/css';
 import diff from 'react-syntax-highlighter/dist/cjs/languages/prism/diff';
 import javascript from 'react-syntax-highlighter/dist/cjs/languages/prism/javascript';
@@ -13,6 +15,9 @@ import tsx from 'react-syntax-highlighter/dist/cjs/languages/prism/tsx';
 import typescript from 'react-syntax-highlighter/dist/cjs/languages/prism/typescript';
 import { a11yDark as themeColor } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { useCopyToClipboard } from 'usehooks-ts';
+
+// Type assertion: react-syntax-highlighter class component types don't match React 18's ElementClass (refs)
+const Highlighter = SyntaxHighlighter as unknown as ComponentType<SyntaxHighlighterProps>;
 
 const languages = {
   javascript: 'javascript',
@@ -72,7 +77,7 @@ const CodeBlock = ({
             )}
           </button>
 
-          <SyntaxHighlighter
+          <Highlighter
             {...props}
             style={themeColor}
             customStyle={{
@@ -86,7 +91,7 @@ const CodeBlock = ({
             wrapLongLines={true}
           >
             {String(children).replace(/\n$/, '')}
-          </SyntaxHighlighter>
+          </Highlighter>
         </div>
       ) : (
         <code className='rounded-md bg-neutral-200 px-2 py-1 text-[14px] font-light text-sky-600 dark:bg-neutral-700 dark:text-sky-300'>

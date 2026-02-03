@@ -20,7 +20,7 @@ const Skills = () => {
     const frontendStacks = FRONTEND_STACK_KEYS.map((key) => [
       key,
       STACKS[key as keyof typeof STACKS],
-    ]).filter(([, icon]) => icon != null);
+    ]).filter(([, icon]) => icon != null) as Array<[string, ReactNode]>;
     const shuffledArray = [...frontendStacks].sort(() => Math.random() - 0.5);
     setShuffledSkills(shuffledArray);
   }, []);

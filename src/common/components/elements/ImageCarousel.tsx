@@ -1,3 +1,4 @@
+import type { ComponentType } from 'react';
 import { useEffect, useRef } from 'react';
 import Slider from 'react-slick';
 import { useWindowSize } from 'usehooks-ts';
@@ -6,6 +7,15 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import Image from './Image';
+
+// Type assertion: react-slick class component types don't match React 18's ElementClass (refs).
+// Use a minimal props type to avoid React 18 vs @types/react-slick children type conflicts.
+const CarouselSlider = Slider as unknown as ComponentType<{
+  ref?: React.Ref<Slider>;
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}>;
 
 interface ImageCarouselProps {
   images: string[];
@@ -79,7 +89,7 @@ const ImageCarousel = ({ images, interval = 3000 }: ImageCarouselProps) => {
   };
 
   return (
-    <Slider ref={sliderRef} {...settings} className='pt-5'>
+    <CarouselSlider ref={sliderRef} {...settings} className='pt-5'>
       {images?.map((image, index) => (
         <div key={index}>
           <Image
@@ -92,7 +102,7 @@ const ImageCarousel = ({ images, interval = 3000 }: ImageCarouselProps) => {
           />
         </div>
       ))}
-    </Slider>
+    </CarouselSlider>
   );
 };
 
