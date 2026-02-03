@@ -105,3 +105,29 @@ export const STACKS = {
   'JWT Authentication': <Key size={iconSize} className='text-orange-500' />,
   'RESTful APIs': <Link2 size={iconSize} className='text-blue-500' />,
 };
+
+// Frontend-only tools for portfolio display (no backend)
+export const FRONTEND_STACK_KEYS = [
+  'JavaScript',
+  'TypeScript',
+  'React',
+  'React js',
+  'Vue',
+  'Angular',
+  'Next',
+  'Next js',
+  'Redux',
+  'Jest',
+  'Git',
+  'GitHub',
+  'HTML',
+  'CSS',
+  'SASS',
+  'TailwindCSS',
+  'Tailwindcss',
+  'Bootstrap',
+  'ChakraUI',
+  'Figma',
+  'Vite',
+  'Material Ui',
+];

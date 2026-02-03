@@ -29,8 +29,8 @@ const HeaderTop = () => {
       <div className='mx-8 hidden items-center justify-between gap-5 py-8 lg:flex'>
         <div className='flex items-center gap-5'>
           <Image
-            src='/images/shahbaz-new.png'
-            alt='Muhammad Shahbaz'
+            src='/images/zain-new.png'
+            alt='Zain Chohan'
             width={40}
             height={40}
             rounded='rounded-full'
@@ -40,7 +40,7 @@ const HeaderTop = () => {
             <div className='flex items-center gap-3'>
               <Link href='/' passHref>
                 <h2 className='flex-grow  text-lg font-medium lg:text-xl'>
-                  Muhammad Shahbaz
+                  Zain Chohan
                 </h2>
               </Link>
               <Tooltip title='Verified'>

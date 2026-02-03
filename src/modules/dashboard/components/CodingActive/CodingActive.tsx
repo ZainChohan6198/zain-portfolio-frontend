@@ -57,7 +57,7 @@ const CodingActive = ({ lastUpdate }: CodingActiveProps) => {
         <div className='dark:text-neutral-400 md:flex-row md:items-center'>
           <span>My </span>
           <Link
-            href='https://wakatime.com/@shahbazpro2'
+            href='https://wakatime.com/@zainchohan6198'
             className='hover:text-neutral-900 hover:underline dark:hover:text-neutral-100'
           >
             WakaTime

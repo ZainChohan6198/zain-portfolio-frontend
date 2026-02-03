@@ -100,10 +100,10 @@ const BlogCardNew = ({
             </div>
             <Breakline className='!border-neutral-700' />
             <div className='flex justify-between gap-4 px-0.5 text-neutral-400'>
-              <Tooltip title='by shahbazpro2'>
+              <Tooltip title='by zainchohan6198'>
                 <Image
-                  src='/images/shahbaz-new.png'
-                  alt='Muhammad Shahbaz'
+                  src='/images/zain-new.png'
+                  alt='Zain Chohan'
                   width={25}
                   height={25}
                   rounded='rounded-full'

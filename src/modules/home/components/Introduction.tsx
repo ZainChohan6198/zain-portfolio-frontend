@@ -3,7 +3,7 @@ const Introduction = () => {
     <section className='bg-cover bg-no-repeat '>
       <div className='space-y-3'>
         <div className='flex gap-2  text-2xl font-medium lg:text-3xl'>
-          <h1>Hi, I&apos;m Muhammad Shahbaz</h1>{' '}
+          <h1>Hi, I&apos;m Zain Chohan</h1>{' '}
           <div className='ml-1 animate-waving-hand'>👋</div>
         </div>
         <div className='space-y-4'>
@@ -11,16 +11,16 @@ const Introduction = () => {
             <li>
               Based in Pakistan <span className='ml-1'>🇵🇰</span>
             </li>
-            <li>Full Stack Developer</li>
+            <li>Front End Developer</li>
           </ul>
         </div>
       </div>
 
       <p className='mt-6 leading-[1.8] text-neutral-800 dark:text-neutral-300 md:leading-loose'>
-        Passionate Full Stack Developer specializing in JavaScript ecosystem. I
-        work with React, Next.js, Node.js, and Nest.js to create modern,
-        scalable web applications. I thrive on building efficient, user-friendly
-        solutions and staying up-to-date with the latest web technologies.
+        Front End Developer focused on building fast, accessible, and responsive
+        user interfaces. I work with React, Next.js, TypeScript, and modern CSS
+        to create clean, maintainable web experiences. I care about performance,
+        accessibility, and staying current with front-end best practices.
       </p>
     </section>
   );

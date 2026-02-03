@@ -1,42 +1,42 @@
-const canonicalUrl = 'https://shahbaz.pro';
-const metaImage = '/images/shahbaz-new.png';
+const canonicalUrl = 'https://zainchohan.dev';
+const metaImage = '/images/zain-new.png';
 const metaDescription =
-  'Passionate Full Stack Developer specializing in JavaScript ecosystem. I work with React, Next.js, Node.js, and Nest.js to create modern, scalable web applications.';
+  'Front End Developer specializing in React, Next.js, and TypeScript. I build fast, accessible, and responsive user interfaces.';
 
 const defaultSEOConfig = {
-  defaultTitle: 'Muhammad Shahbaz - Full Stack Developer',
+  defaultTitle: 'Zain Chohan - Front End Developer',
   description: metaDescription,
   canonical: canonicalUrl,
   openGraph: {
     canonical: canonicalUrl,
-    title: 'Muhammad Shahbaz - Full Stack Developer',
+    title: 'Zain Chohan - Front End Developer',
     description: metaDescription,
     type: 'website',
     images: [
       {
         url: metaImage,
-        alt: 'shahbaz.dev og-image',
+        alt: 'Zain Chohan portfolio og-image',
         width: 800,
         height: 600,
       },
       {
         url: metaImage,
-        alt: 'shahbaz.dev og-image',
+        alt: 'Zain Chohan portfolio og-image',
         width: 1200,
         height: 630,
       },
       {
         url: metaImage,
-        alt: 'shahbaz.dev og-image',
+        alt: 'Zain Chohan portfolio og-image',
         width: 1600,
         height: 900,
       },
     ],
-    site_name: 'shahbazpro2',
+    site_name: 'zainchohan6198',
   },
   twitter: {
-    handle: '@shahbazpro2',
-    site: '@shahbazpro2',
+    handle: '@zainchohan6198',
+    site: '@zainchohan6198',
     cardType: 'summary_large_image',
   },
 };

@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { memo, ReactNode, useEffect, useState } from 'react';
 
 import InfiniteLoopSlider from '@/common/components/elements/InfiniteLoopSlider';
-import { STACKS } from '@/common/constant/stacks';
+import { FRONTEND_STACK_KEYS, STACKS } from '@/common/constant/stacks';
 
 const Tag = memo(({ icon, title }: { icon: ReactNode; title: string }) => (
   <div className='mr-3 flex w-max items-center gap-2 rounded-full border border-neutral-300 bg-neutral-50 px-5 py-2 text-[15px] shadow-sm dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-50'>
@@ -17,8 +17,11 @@ const Skills = () => {
   >([]);
 
   useEffect(() => {
-    const skillsArray = Object.entries(STACKS);
-    const shuffledArray = [...skillsArray].sort(() => Math.random() - 0.5);
+    const frontendStacks = FRONTEND_STACK_KEYS.map((key) => [
+      key,
+      STACKS[key as keyof typeof STACKS],
+    ]).filter(([, icon]) => icon != null);
+    const shuffledArray = [...frontendStacks].sort(() => Math.random() - 0.5);
     setShuffledSkills(shuffledArray);
   }, []);
 
