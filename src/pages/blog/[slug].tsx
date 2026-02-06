@@ -42,7 +42,7 @@ const BlogDetailPage: NextPage<BlogDetailPageProps> = ({ blog }) => {
   return (
     <>
       <NextSeo
-        title={`${blogData?.title?.rendered} - Blog Muhammad Shahbaz`}
+        title={`${blogData?.title?.rendered} - Blog Zain Chohan`}
         description={description}
         canonical={canonicalUrl}
         openGraph={{
@@ -50,7 +50,7 @@ const BlogDetailPage: NextPage<BlogDetailPageProps> = ({ blog }) => {
           article: {
             publishedTime: blogData?.date,
             modifiedTime: blogData?.date,
-            authors: ['Muhammad Shahbaz', 'shahbazpro2'],
+            authors: ['Zain Chohan', 'shahbazpro2'],
           },
           url: canonicalUrl,
           images: [

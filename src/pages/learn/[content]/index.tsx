@@ -41,7 +41,7 @@ const LearnContentPage: NextPage<ContentPageProps> = ({
   return (
     <>
       <NextSeo
-        title={`Learn ${title} - Muhammad Shahbaz`}
+        title={`Learn ${title} - Zain Chohan`}
         description={description}
         canonical={canonicalUrl}
         openGraph={{
@@ -51,7 +51,7 @@ const LearnContentPage: NextPage<ContentPageProps> = ({
               url: content?.image,
             },
           ],
-          siteName: 'Muhammad Shahbaz',
+          siteName: 'Zain Chohan',
         }}
       />
       <Container data-aos='fade-up'>
