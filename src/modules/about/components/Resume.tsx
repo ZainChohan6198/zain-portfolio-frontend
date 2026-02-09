@@ -4,7 +4,7 @@ import { LuDownload as DownloadIcon } from 'react-icons/lu';
 import GoogleDocsEmbed from '@/common/components/elements/GoogleDocsEmbed';
 
 const Resume = () => {
-  const RESUME_URL = 'http://bit.ly/454u5VS';
+  const RESUME_URL = 'http://bit.ly/4qstKVz';
 
   return (
     <div className='space-y-5'>
@@ -19,7 +19,7 @@ const Resume = () => {
         <span>Download Resume & Template</span>
       </Link>
 
-      <GoogleDocsEmbed src='https://docs.google.com/document/d/1U0mkHq9uRTdU_tn2q3T2Xk9o_CcoZv6sA_vGdW7g9Cs/edit?tab=t.0' />
+      <GoogleDocsEmbed src='https://docs.google.com/document/d/1536LlQyeir5IJHB1ZEq95PAKL6JmWgdExsDVRdyKc1Q/edit?usp=sharing' />
     </div>
   );
 };
