@@ -5,7 +5,6 @@ import { SWRConfig } from 'swr';
 import Container from '@/common/components/elements/Container';
 import PageHeading from '@/common/components/elements/PageHeading';
 import Dashboard from '@/modules/dashboard';
-import { getGithubUser } from '@/services/github';
 
 interface DashboardPageProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -32,19 +31,14 @@ export default DashboardPage;
 
 export const getStaticProps: GetStaticProps = async () => {
   // const readStats = await getReadStats();
-  let githubUserPersonal = null;
-  try {
-    githubUserPersonal = await getGithubUser('personal');
-  } catch {
-    // 401 or other error during build (e.g. missing GITHUB_TOKEN on Vercel).
-    // Page still builds; client-side SWR will fetch from /api/github when users visit.
-  }
-
+  // Don't pass GitHub data as fallback so the client always fetches from /api/github
+  // with the correct from/to date range (last 365 days). Build-time data would use
+  // whatever range was computed at build time and can show only partial months.
   return {
     props: {
       fallback: {
         // '/api/read-stats': readStats.data,
-        '/api/github?type=personal': githubUserPersonal?.data ?? null,
+        '/api/github?type=personal': null,
       },
     },
     revalidate: 1,

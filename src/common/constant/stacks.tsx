@@ -1,6 +1,5 @@
 import { Key, Link2, Shield } from 'lucide-react';
 import {
-  SiAngular,
   SiBootstrap,
   SiChakraui,
   SiCss3,
@@ -45,7 +44,6 @@ export const STACKS = {
   React: <SiReact size={iconSize} className='text-blue-500' />,
   'React js': <SiReact size={iconSize} className='text-blue-500' />,
   Vue: <SiVuedotjs size={iconSize} className='text-green-500' />,
-  Angular: <SiAngular size={iconSize} className='text-red-500' />,
   Node: <SiNodedotjs size={iconSize} className='text-green-500' />,
   Next: <SiNextdotjs size={iconSize} className='text-black dark:text-white' />,
   'Next js': (
@@ -113,7 +111,6 @@ export const FRONTEND_STACK_KEYS = [
   'React',
   'React js',
   'Vue',
-  'Angular',
   'Next',
   'Next js',
   'Redux',

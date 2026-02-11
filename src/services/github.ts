@@ -4,9 +4,9 @@ import { GITHUB_ACCOUNTS } from '@/common/constant/github';
 
 const GITHUB_USER_ENDPOINT = 'https://api.github.com/graphql';
 
-const GITHUB_USER_QUERY = `query($username: String!) {
+const GITHUB_USER_QUERY = `query($username: String!, $from: DateTime!, $to: DateTime!) {
   user(login: $username) {
-    contributionsCollection {
+    contributionsCollection(from: $from, to: $to) {
       contributionCalendar {
         colors
         totalContributions
@@ -32,12 +32,29 @@ export const fetchGithubData = async (
   username: string,
   token: string | undefined,
 ) => {
+  const now = new Date();
+  // Use UTC so the range is correct regardless of server timezone.
+  // Request full last 365 days so the contribution calendar shows all months.
+  const to = now.toISOString();
+  const fromDate = new Date(Date.UTC(
+    now.getUTCFullYear() - 1,
+    now.getUTCMonth(),
+    now.getUTCDate(),
+    0,
+    0,
+    0,
+    0,
+  ));
+  const from = fromDate.toISOString();
+
   const response = await axios.post(
     GITHUB_USER_ENDPOINT,
     {
       query: GITHUB_USER_QUERY,
       variables: {
-        username: username,
+        username,
+        from,
+        to,
       },
     },
     {
