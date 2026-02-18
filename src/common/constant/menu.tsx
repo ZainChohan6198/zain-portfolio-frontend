@@ -111,7 +111,7 @@ export const SOCIAL_MEDIA: MenuItemProps[] = [
   },
   {
     title: 'Linkedin',
-    href: 'https://www.linkedin.com/in/zainchohan6198/',
+    href: 'https://www.linkedin.com/in/zainchohan/',
     icon: <LinkedinIcon size={iconSize} />,
     isShow: true,
     isExternal: true,
