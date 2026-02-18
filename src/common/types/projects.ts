@@ -24,15 +24,10 @@ export interface ProjectItemProps {
   content?: string;
   featured: boolean;
   updatedAt: Date;
-  gallery: [
-    {
-      image: {
-        thumbnailURL: string;
-        url: string;
-      };
-      id: string;
-    },
-  ];
+  gallery: Array<{
+    url: string;
+    id: string;
+  }>;
 }
 
 export interface ProjectsProps {

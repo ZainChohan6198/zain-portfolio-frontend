@@ -45,15 +45,15 @@ const ProjectDetail = ({
                       (stack.technology?.charAt(0).toUpperCase() +
                         stack.technology?.slice(1)) as keyof typeof STACKS
                     ] && (
-                      <Tooltip title={stack.technology}>
-                        {
-                          STACKS[
+                        <Tooltip title={stack.technology}>
+                          {
+                            STACKS[
                             (stack.technology?.charAt(0).toUpperCase() +
                               stack.technology?.slice(1)) as keyof typeof STACKS
-                          ]
-                        }
-                      </Tooltip>
-                    )}
+                            ]
+                          }
+                        </Tooltip>
+                      )}
                   </div>
                 ),
               )}

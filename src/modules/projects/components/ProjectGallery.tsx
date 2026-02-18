@@ -6,10 +6,7 @@ import { imageBaseUrl } from '@/services/image';
 
 interface ProjectGalleryProps {
   images: Array<{
-    image: {
-      thumbnailURL: string;
-      url: string;
-    };
+    url: string;
     id: string;
   }>;
 }
@@ -45,10 +42,10 @@ const ProjectGallery = ({ images }: ProjectGalleryProps) => {
           <div
             key={item.id}
             className='group relative cursor-pointer overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-700'
-            onClick={() => openLightbox(`${imageBaseUrl}${item.image.url}`)}
+            onClick={() => openLightbox(`${imageBaseUrl}${item.url}`)}
           >
             <Image
-              src={`${imageBaseUrl}${item.image.url}`}
+              src={`${imageBaseUrl}${item.url}`}
               alt={`Project image ${index + 1}`}
               width={400}
               height={300}
